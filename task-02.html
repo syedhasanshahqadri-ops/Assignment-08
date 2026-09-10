@@ -1,0 +1,230 @@
+Enter<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flow Navbar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    #2768bd 0%,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    #4b1d80 0%,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #071b50,
+                    #142f75 50%,
+                    #07143d
+                );
+
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            padding-top: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 80px;
+        }
+
+        h1 span {
+            color: #38bdf8;
+            font-size: 34px;
+            margin-right: 8px;
+        }
+
+        /* Navbar */
+        .navbar {
+            width: 80%;
+            max-width: 850px;
+            height: 52px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 18px;
+
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Logo and brand */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 100px;
+        }
+
+        .logo {
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                #38bdf8,
+                #818cf8
+            );
+        }
+
+        .brand strong {
+            font-size: 14px;
+        }
+
+        /* Navigation links */
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 12px;
+            transition: 0.2s;
+        }
+
+        .links a:hover {
+            color: white;
+        }
+
+        /* Sign Up button */
+        button {
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+
+            padding: 9px 17px;
+            border-radius: 8px;
+
+            background: linear-gradient(
+                135deg,
+                #38bdf8,
+                #818cf8
+            );
+
+            cursor: pointer;
+        }
+
+        /* Mobile Navbar */
+        .mobile-nav {
+            display: none;
+            width: 255px;
+            margin-top: 34px;
+        }
+
+        /* Hamburger */
+        .menu {
+            width: 22px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu span {
+            height: 2px;
+            width: 22px;
+
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 22px;
+                margin-bottom: 50px;
+            }
+
+            h1 span {
+                font-size: 27px;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+
+            .mobile-nav {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        <span>20</span> CSS Responsive Navbar Designs
+    </h1>
+
+    <!-- Desktop Navbar -->
+    <nav class="navbar desktop-nav">
+
+        <div class="brand">
+            <div class="logo"></div>
+            <strong>Flow</strong>
+        </div>
+
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Docs</a>
+            <a href="#">Blog</a>
+        </div>
+
+        <button>Sign up</button>
+
+    </nav>
+
+
+    <!-- Mobile Navbar -->
+    <nav class="navbar mobile-nav">
+
+        <div class="brand">
+            <div class="logo"></div>
+            <strong>Flow</strong>
+        </div>
+
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+
+</body>
+</html>
