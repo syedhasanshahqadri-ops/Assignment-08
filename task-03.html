@@ -1,0 +1,246 @@
+Enter<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navbar Design</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f8fafa;
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main Navbar */
+        .navbar {
+            width: 660px;
+            height: 64px;
+
+            background: #111111;
+
+            border: 6px solid #111111;
+            border-radius: 40px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 5px;
+
+            box-shadow:
+                0 12px 18px rgba(0, 0, 0, 0.20),
+                0 25px 35px rgba(0, 0, 0, 0.10);
+        }
+
+        /* Logo */
+        .logo {
+            width: 48px;
+            height: 48px;
+
+            background: #ffffff;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-right: 27px;
+
+            flex-shrink: 0;
+        }
+
+        /* Simple logo icon */
+        .logo-icon {
+            width: 20px;
+            height: 20px;
+
+            position: relative;
+        }
+
+        .logo-icon::before {
+            content: "";
+
+            position: absolute;
+
+            width: 14px;
+            height: 14px;
+
+            background: #111111;
+
+            border-radius: 50%;
+
+            top: 2px;
+            left: 1px;
+        }
+
+        .logo-icon::after {
+            content: "";
+
+            position: absolute;
+
+            width: 8px;
+            height: 5px;
+
+            background: #111111;
+
+            border-radius: 50%;
+
+            right: 0;
+            bottom: 2px;
+
+            transform: rotate(25deg);
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 31px;
+
+            flex: 1;
+        }
+
+        .nav-links a {
+            color: #eeeeee;
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 400;
+
+            white-space: nowrap;
+
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        /* Email Button */
+        .email {
+            height: 48px;
+
+            min-width: 174px;
+
+            padding: 0 20px;
+
+            background: #ffffff;
+
+            color: #222222;
+
+            border-radius: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 14px;
+
+            white-space: nowrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+
+            .navbar {
+                width: 92%;
+                height: auto;
+
+                min-height: 60px;
+
+                padding: 4px;
+            }
+
+            .logo {
+                width: 46px;
+                height: 46px;
+
+                margin-right: 15px;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .email {
+                min-width: auto;
+                height: 44px;
+
+                padding: 0 12px;
+
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .navbar {
+                width: 95%;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+
+            .logo {
+                margin-right: 8px;
+            }
+
+            .email {
+                padding: 0 9px;
+                font-size: 9px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <div class="logo-icon"></div>
+        </div>
+
+        <!-- Menu -->
+        <div class="nav-links">
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="#">Playground</a>
+            <a href="#">Resource</a>
+        </div>
+
+        <!-- Email -->
+        <div class="email">
+            ihyaet@gmail.com
+        </div>
+
+    </nav>
+
+</body>
+</html>
